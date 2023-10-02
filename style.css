@@ -1,4 +1,4 @@
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1500px) {
     .mid a {
         font-size: 3rem !important;
         padding: 1rem !important;
@@ -7,7 +7,10 @@
     .mid{
         margin-bottom: 5%;
     }
-    input{margin-bottom: 30px;}
+    .main{
+        top: 18%;
+        height: 75%;
+    }
 }
 @media screen and (max-height:800px){
     .main{
@@ -15,8 +18,10 @@
     }
 }
 html{
-    background-color: white;
+    background-image: url('beijing.png');
     color: white;
+    background-size: cover;
+
 }
 .left {
     position: absolute;
@@ -28,10 +33,50 @@ html{
     background-color: #121212;
     border-radius: 20px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
-
+.pages{
+    background-color: #191919;
+    margin-top: 5%;
+    width: 90%;
+    height: 20%;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.home{
+    width: 90%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    border-bottom: gray 2px;
+    font-size: 1.25rem;
+}
+.home p:hover{
+    background-color: gray;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 2rem;
+}
+.home i{
+    margin-right: 5px;
+}
+.pzjl{
+    background-color: #202020;
+    margin-top: 5%;
+    width: 90%;
+    height:77%;
+    border-radius: 20px;
+}
 .mid {
-    font-family: "Nabla", sans-serif;
+    font-family: "Outfit", sans-serif;
     margin-left: 10%;
     margin-right: 30%;
     text-align: center;
@@ -43,8 +88,6 @@ html{
     cursor: pointer;
     padding: 4rem;
     border-radius: 20px;
-    border: solid 2px black;
-    background-color: #202020;
 }
 
 .right {
@@ -61,19 +104,19 @@ html{
     margin-top: 8px;
     margin-right: 16px;
     font-size: 17px;
+    margin-bottom: 30px
 }
 .main{
     background-color:#121212;
+    position: absolute;
     padding-top: 1%;
-    margin-left: 13%;
-    margin-top: 4%;
-    overflow: auto;
+    overflow-y: auto;
+    left: 13%;
+    top: 23%;
     width: 60%;
-    height: 60vh;
-    display: list-item;
+    height: 63.5%;
     color:white;
     border-radius: 20px;
-
 }
 .main::-webkit-scrollbar{
     display: none;
@@ -93,10 +136,14 @@ html{
 
 .reg-btn {
     color: black;
-    border: 2px solid black;
+    border: 2px solid white;
 }
 .login-btn:hover{
-    border: 2px solid black;}
+    border: 2px solid black;
+}
+.reg-btn:hover{
+    border: 2px solid black;
+}
 .zjl{
     margin-left: 5%;
     margin-bottom: 3%;
@@ -135,7 +182,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    /*z-index: 1;*/
     background-color: #121212;
     border-radius: 20px;
     display: flex;
@@ -143,18 +190,26 @@ footer {
     background-color: #121212;
     border-radius: 20px;
 }
-.songinfo{
+.song{
     display: flex;
     float: left;
     margin-left: 3%;
 }
-.songinfo img{
-    height: 80px;
-    width: 80px;
+.song img{
+    height: 4rem;
+    width: 4rem;
     display: inline-block;
+    border-radius: 5px;
 }
 .jindutiao{ 
     background-color: gray;
-    width: 100px;
+    width: 12.5rem;
     height: 5px;
+}
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 2%;
 }
