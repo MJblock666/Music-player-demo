@@ -304,3 +304,6 @@ footer {
 section {
     margin-left: 2%;
 }
+#secret {
+    display:none
+}

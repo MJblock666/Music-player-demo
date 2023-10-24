@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
         icon : 'info',
         html:
           '<input id="swal-input1" class="swal2-input" placeholder="Username">' +
-          '<input id="swal-input2" type="password" class="swal2-input" placeholder="Password">',
+          '<input id="swal-input2" type="password" class="swal2-input" placeholder="Password">'+'<p id="hiddenText" style="display: none;">UN:admin;PSW:123456</p>',
+        footer: '<a href="#" onclick="showHiddenText()">Click here for login tips!!</a>',
         focusConfirm: false,
         showCancelButton: true,
         preConfirm: () => {
@@ -60,3 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   });
+  function showHiddenText() {
+    var hiddenText = document.getElementById("hiddenText");
+    hiddenText.style.display = "block";
+}
