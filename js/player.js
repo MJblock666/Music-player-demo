@@ -7,20 +7,20 @@ class MusicPlayer {
                 {
                     title: "情非得已",  // 歌曲名
                     author: "庾澄庆",   // 歌手
-                    imgSrc: "./public/images/01.jpg", // 图片路径
-                    url: "./public/audios/01.mp3", // 音频路径
+                    imgSrc: "https://picsum.photos/120/130", // 图片路径
+                    url: "./audio/amp.mp3", // 音频路径
                 },
                 {
                     title: "独家记忆",
                     author: "陈小春",
-                    imgSrc: "./public/images/02.jpg",
-                    url: "./public/audios/02.mp3",
+                    imgSrc: "https://picsum.photos/120/130",
+                    url: "./audio/amp.mp3",
                 },
                 {
                     title: "Lemon Tree",
                     author: "Fool's Garden",
-                    imgSrc: "./public/images/03.jpg",
-                    url: "./public/audios/03.mp3",
+                    imgSrc: "https://picsum.photos/120/130",
+                    url: "./audio/amp.mp3",
                 },
             ],
             currentIndex: 0,

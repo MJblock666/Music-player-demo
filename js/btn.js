@@ -6,5 +6,28 @@ function reg(){
         footer: 'Get help from About us page!'
       })
 }
-/*音乐播放*/
-
+/*about*/
+function about(){
+  Swal.fire({
+      icon: 'info',
+      title:'INFO',
+      text: 'A lot things are coming soon,still updating.UN:admin,PSW:12345',
+      footer: '<a href=#>Click here for contact us!</a>'
+    })
+}
+function login(){
+  Swal.fire({
+    icon : 'info',
+    title: 'Login',
+    html:
+      '<input id="swal-input1" class="swal2-input" placeholder="Username">' +
+      '<input id="swal-input2" class="swal2-input" placeholder="Password">',
+    focusConfirm: false,
+    preConfirm: () => {
+      return [
+        document.getElementById('swal-input1').value,
+        document.getElementById('swal-input2').value
+      ]
+    }
+  })
+}

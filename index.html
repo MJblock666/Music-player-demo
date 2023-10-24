@@ -8,6 +8,7 @@
         content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/btn.js"></script>
+    <link rel="stylesheet" href="css/player.css">
     <!--引用别人的JS/CSS文件-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -23,7 +24,7 @@
                 <p><i class="fa-solid fa-house" style="color: #ffffff;"></i><a>home</a></p>
             </div>
             <div class="home">
-                <p><i class="fa-solid fa-user" style="color: #ffffff;"></i><a>About us</a></p>
+                <p onclick="about()"><i class="fa-solid fa-user" style="color: #ffffff;"></i><a>About us</a></p>
             </div>
         </div>
         <div class="pzjl">
@@ -47,11 +48,17 @@
             </div>
         </div>
     </div>
-    <div class="right">
+    <div class="right" id="loginArea">
         <input type="text" placeholder="Search..">
-        <a class="login-btn">Login</a>
+        <script src="js/login.js"></script>
+        <button id="loginButton" style="border: none;outline: none;background: none;"><a
+            class="login-btn">Login</a></button>
         <a class="login-btn" onclick="reg()">Register</a>
     </div>
+    <div class="right" id="userInfoArea" style="display: none;">
+        <input type="text" placeholder="Search..">
+        <p>Welcome, <span id="usernameSpan"></span>!</p>
+      </div>
     <div class="mid">
         <a>SoundClub</a>
     </div>
@@ -119,29 +126,58 @@
         </section>
     </div>
     <footer>
+        <!-- 上部分 -->
         <div class="song">
-            <img src="https://picsum.photos/120/130" alt="">
-            <div class="info">
-                <div><span>Song</span>-
-                    <span>singer</span>
+            <article>
+                <div class="m-img-box">
+                    <div class="m-img-content"></div>
                 </div>
-                <div class="jindutiao"></div>
-                <div><span>00:00</span>-
-                    <span>00:00</span>
+            </article>
+            <!-- 下部分 -->
+            <section>
+                <div class="m-description-content info">
+                    <article>
+                        <p class="m-title">音乐名</p>-
+                        <p class="m-author">作者</p>
+                    </article>
                 </div>
+                <div class="m-progress-bar">
+                    <div class="m-progress-main">
+                        <span class="m-progress-btn"></span>
+                    </div>
+                    <div class="m-progress-load"></div>
+                </div>
+                <span class="m-current-time">00 : 00</span>-
+                <span class="m-total-time">00 : 00</span>
+            </section>
+        </div>
+        <div class="playbtn">
+            <div class="m-btn-box">
+                <button class="m-previous-btn">
+                    <svg class="icon" aria-hidden="true" style="transform: scale(-1);color:#ffffff">
+                        <use href="#icon-xiayishou"></use>
+                    </svg>
+                </button>
+                <button class="m-play-btn">
+                    <svg class="icon" aria-hidden="true" style="color:white;">
+                        <use href="#icon-bofang"></use>
+                    </svg>
+                </button>
+                <button class="m-next-btn">
+                    <svg class="icon" aria-hidden="true" style="color:white;">
+                        <use href="#icon-xiayishou"></use>
+                    </svg>
+                </button>
             </div>
         </div>
-        <audio src="http://music.163.com/song/media/outer/url?id=839108.mp3"></audio>
-        <div class="playbtn">
-            <i class="fa-solid fa-backward-step"></i>
-            <i class="fa-solid fa-pause" style="color:#121212"></i>
-            <i class="fa-solid fa-forward-step"></i>
-        </div>
-        <div class="youxiajiao"> 
+        <div class="youxiajiao">
             <i class="fa-solid fa-volume-low"></i>
             <i class="fa-regular fa-clipboard"></i>
         </div>
     </footer>
+
+    <script src="js/player.js"></script>
+    <script src="js/iconfont.js"></script>
 </body>
 
 </html>
