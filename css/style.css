@@ -113,7 +113,7 @@ html {
     height: 15%;
     margin-top: 3%;
     background-color: #121212;
-
+    cursor: pointer;
 }
 
 .zuobianzhuanji img {
@@ -306,4 +306,32 @@ section {
 }
 #secret {
     display:none
+}
+
+/* 音量控制容器样式 */
+.volume-control {
+  position: relative;
+  background-color: #333; /* 设置背景颜色为黑色，可以根据需要自行更改 */
+  width: 30px; /* 设置容器宽度 */
+  height: 100px; /* 设置容器高度 */
+}
+
+/* 音量按钮样式 */
+.volume-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  color: white; /* 设置按钮内 Font Awesome 图标的颜色为白色 */
+  padding: 5px;
+  text-align: center;
+}
+
+/* 音量控制横框样式 */
+#volumeControlBar {
+  width: 10px; /* 设置横框宽度 */
+  height: 100px; /* 设置横框高度 */
+  position: absolute;
+  top: -10px; /* 使横框位于按钮上方 */
+  left: 10px; /* 调整横框位置，使其位于按钮旁边 */
 }

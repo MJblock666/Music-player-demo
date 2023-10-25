@@ -1,45 +1,36 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // 获取音量控制按钮
-    const volumeButton = document.getElementById('volumeButton');
-    
-    // 创建音量控制横框
-    const volumeControl = document.createElement('div');
-    volumeControl.className = 'volume-control';
-    volumeControl.innerHTML = `
-      <input type="range" id="volumeSlider" min="0" max="100">
-    `;
-    
-    // 添加横框到页面，但最初隐藏
-    document.body.appendChild(volumeControl);
-    volumeControl.style.display = 'none';
-  
-    // 标记当前是否为静音状态
-    let isMuted = false;
-  
-    // 为音量控制按钮添加点击事件
-    volumeButton.addEventListener('click', () => {
-      if (isMuted) {
-        // 切换为非静音状态
-        isMuted = false;
-        volumeButton.innerHTML = '<i class="fas fa-play"></i>';
-        // 这里添加取消静音的逻辑
-      } else {
-        // 切换为静音状态
-        isMuted = true;
-        volumeButton.innerHTML = '<i class="fas fa-pause"></i>';
-        // 这里添加静音的逻辑
-      }
-    });
-  
-    // 为音量控制按钮添加悬停事件
-    volumeButton.addEventListener('mouseenter', () => {
-      // 显示音量控制横框
-      volumeControl.style.display = 'block';
-    });
-  
-    // 为音量控制横框添加鼠标离开事件
-    volumeControl.addEventListener('mouseleave', () => {
-      // 隐藏音量控制横框
-      volumeControl.style.display = 'none';
-    });
-  });
+// 单击音量控制按钮时切换音量和图标
+volumeControlButton.addEventListener('click', function() {
+  isMuted = !isMuted;
+  if (isMuted) {
+    currentVolume = audioElement.volume;
+    audioElement.volume = 0; // 静音
+    volumeControlButton.innerHTML = '<i class="fas fa-volume-off" style="color: white;"></i>'; // 静音图标（白色）
+  } else {
+    audioElement.volume = currentVolume; // 取消静音，还原音量
+    if (currentVolume >= 0.5) {
+      volumeControlButton.innerHTML = '<i class="fas fa-volume-high" style="color: white;"></i>'; // 音量高图标（白色）
+    } else {
+      volumeControlButton.innerHTML = '<i class="fas fa-volume-low" style="color: white;"></i>'; // 音量低图标（白色）
+    }
+  }
+});
+
+// ...
+
+// 创建音量控制横框
+const volumeControlBar = document.createElement('input');
+volumeControlBar.type = 'range';
+volumeControlBar.min = 0;
+volumeControlBar.max = 1;
+volumeControlBar.step = 0.1;
+volumeControlBar.value = currentVolume;
+volumeControlBar.addEventListener('input', function() {
+  // 更新音量并保持静音状态
+  audioElement.volume = parseFloat(volumeControlBar.value);
+  isMuted = false;
+  if (currentVolume >= 0.5) {
+    volumeControlButton.innerHTML = '<i class="fas fa-volume-high" style="color: white;"></i>'; // 音量高图标（白色）
+  } else {
+    volumeControlButton.innerHTML = '<i class="fas fa-volume-low" style="color: white;"></i>'; // 音量低图标（白色）
+  }
+});
