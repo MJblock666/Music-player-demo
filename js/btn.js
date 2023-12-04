@@ -3,6 +3,7 @@ function reg(){
     Swal.fire({
         icon: 'error',
         title: 'Register will coming soon',
+        Text:'Test acc Username:admin  Password:123456',
         footer: 'Get help from About us page!'
       })
 }
@@ -12,6 +13,13 @@ function about(){
       icon: 'info',
       title:'INFO',
       html: '<a>A lot things are coming soon,still updating</a><br>',
-      footer: '<a href=>Click here for contact us!!</a>'
+      footer: '<a href="https://github.com/MJblock666/Music-player-demo">Click here to see more details in github</a>'
+    })
+}
+function prank(){
+  Swal.fire({
+      icon: 'error',
+      title:'FUCK YOU!',
+      html: '<a>WHY YOU CLICK THIS ME!!</a>'
     })
 }

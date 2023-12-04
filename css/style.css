@@ -150,7 +150,9 @@ html {
     align-items: center;
     flex-wrap: wrap;
 }
-
+.right *{
+    margin-top: 17px;
+}
 .right input[type=text] {
     padding: 6px;
     border-radius: 3.125rem;
@@ -178,7 +180,13 @@ html {
 .main::-webkit-scrollbar {
     display: none;
 }
-
+#chushi{
+    display: block;
+}
+#tableContainer{
+    text-align: center;
+    top: 30%;
+}
 .right a {
     padding: 10px 20px;
     font-size: 16px;
@@ -229,6 +237,7 @@ html {
     height: 130px;
     margin-top: 13%;
     border-radius: 13px;
+    object-fit: cover;
 }
 
 .zj:hover {

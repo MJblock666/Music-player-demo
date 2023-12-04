@@ -1,0 +1,39 @@
+#tableContainer {
+    text-align: center;
+    justify-content: center;
+}
+
+.back {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#tableContainer {
+    margin: 0 auto;
+    width: 80%;
+}
+
+tr:nth-child(odd) {
+    background-color: black;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #121212;
+    color: white;
+}
+
+table {
+    top: 10%;
+    width: 80%;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin: 0 auto;
+}
+tr button{
+    background-color: gray;
+    border-radius:6px;
+    padding: auto 3px;
+    color: white;
+}

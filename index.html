@@ -8,36 +8,38 @@
         content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/btn.js"></script>
+    <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/player.css">
+    <link rel="stylesheet" href="css/model.css">
     <!--引用别人的JS/CSS文件-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--<script src="https://cdn.jsdelivr.net/gh/jquery/jquery@3.6.4/dist/jquery.min.js"></script>-->
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
-    <!--<script src="js/qrcode.js"></script>--> 
+    <!--<script src="js/qrcode.js"></script>-->
     <div class="left">
         <div class="pages">
-            <div class="home">
-                <p><i class="fa-solid fa-house" style="color: #ffffff;"></i><a>home</a></p>
+            <div class="home" id="homepage" onclick="home()">
+                <p><i class="fa-solid fa-house" style="fill: #ffffff"></i><a>home</a></p>
             </div>
             <div class="home">
-                <p onclick="about()"><i class="fa-solid fa-user" style="color: #ffffff;"></i><a>About us</a></p>
+                <p onclick="about()"><i class="fa-solid fa-user" style="fill: #ffffff"></i><a>About us</a></p>
             </div>
         </div>
         <div class="pzjl">
-            <div class="zuobianzhuanji">
-                <img src="https://picsum.photos/120/130">
+            <div class="zuobianzhuanji" onclick="recent()"> 
+                <img src="https://misc.scdn.co/liked-songs/liked-songs-640.png">
                 <div class="zuobianzhuanji-text">
                     <a><i class="fa-solid fa-clock-rotate-left" style="color: #ffffff;"></i>&nbsp;Recent
                 </div>
             </div>
-            <div class="zuobianzhuanji">
-                <img src="https://picsum.photos/120/130">
+            <div class="zuobianzhuanji" onclick="favorite()">
+                <img src="https://f4.bcbits.com/img/a3390257927_65">
                 <div class="zuobianzhuanji-text">
                     <a><i class="fa-solid fa-heart" style="color: #ffffff;"></i>&nbsp;Favorite</a>
                 </div>
@@ -48,62 +50,72 @@
         <input type="text" placeholder="Search..">
         <script src="js/login.js"></script>
         <button id="loginButton" style="border: none;outline: none;background: none;"><a
-            class="login-btn">Login</a></button>
-        <a class="login-btn" onclick="reg()">Register</a>
+                class="login-btn">Login</a></button>
+        <button onclick="reg()" style="border: none;outline: none;background: none;margin-left: 10px;"><a
+                class="login-btn">Register</a></button>
     </div>
     <div class="right" id="userInfoArea" style="display: none;">
         <input type="text" placeholder="Search..">
         <p>Welcome, <span id="usernameSpan"></span>!</p>
-      </div>
+    </div>
     <div class="mid">
         <a>SoundClub</a>
     </div>
     <div class="main">
-        <section class="zjl">
-            <strong>Popular albums</strong><br />
-            <div class="list">
-                <div class="zj">
-                    <img src="https://picsum.photos/120/130">
+        <div id="tableContainer" style="display: block;"></div>
+        <div id="chushi">
+            <section class="zjl">
+                <strong>Popular albums</strong><br />
+                <div class="list">
+                    <div class="zj" onclick="sorry();">
+                        <img src="https://i1.sndcdn.com/avatars-000330767037-lhcj27-t500x500.jpg">
+                        Avicii Special
+                    </div>
+                    <div class="zj" onclick="sorry();">
+                        <img src="https://imageio.forbes.com/specials-images/imageserve/5be1e2a3a7ea437059163919/0x0.jpg?format=jpg&crop=1999,1999,x0,y0,safe&height=1999&width=1999">
+                        Marshmello Special
+                    </div>
+                    <div class="zj" onclick="sorry();">
+                        <img src="https://pbs.twimg.com/profile_images/1674851403297333248/68Cya2zp_400x400.jpg">
+                        Riot Games Music
+                    </div>
+                    <div class="zj" onclick="sorry();">
+                        <img src="https://yt3.googleusercontent.com/ytc/APkrFKZI2461kW3xWRXDI-fKTcH6gRiXpyELwgyePbkO=s900-c-k-c0x00ffffff-no-rj">
+                        <p>No Copyright Music Special</p>
+                    </div>
+                    <div class="zj" onclick="sorry();">
+                        <img src="https://f4.bcbits.com/img/a3390257927_65">
+                        Minecraft-C418
+                    </div>
                 </div>
-                <div class="zj">
-                    <img src="https://picsum.photos/120/130">
+            </section>
+            <section class="zjl">
+                <strong>Popular singer</strong><br />
+                <div class="list">
+                    <div class="zj" onclick="sorry();">
+                        <img src="https://cdn.britannica.com/86/182086-050-5FB81069/singer-Taylor-swift-2013.jpg">
+                        Taylor Swift
+                    </div>
+                    <div class="zj" onclick="sorry();">
+                        <img
+                            src="https://www.amsterdam-dance-event.nl/uploads/images/artists-speakers/_900xAUTO_crop_center-center_none/alan_walker_165727.jpg">
+                        Alan Walker
+                    </div>
+                    <div class="zj" onclick="sorry();">
+                        <img src="https://static.independent.co.uk/2023/03/22/17/FOB%20011323%20high-low.jpg">
+                        <p>Fall out boy</p>
+                    </div>
+                    <div class="zj" onclick="sorry();">
+                        <img src="https://media.npr.org/assets/music/news/2010/09/maroon-e9cb8c5b25b4d1f3e68aa26e6a0ce51cf2ae59d8-s1100-c50.jpg">
+                        Maroon 5
+                    </div>
+                    <div class="zj" onclick="prank()">
+                        <img src="https://images.twgreatdaily.com/images/image/M1H/M1H1bm8BMH2_cNUgSVhg.jpg">
+                        <br>Me
+                    </div>
                 </div>
-                <div class="zj">
-                    <img src="https://picsum.photos/120/130">
-                </div>
-                <div class="zj">
-                    <img src="https://picsum.photos/120/130">
-                </div>
-                <div class="zj">
-                    <img src="https://picsum.photos/120/130">
-                </div>
-            </div>
-        </section>
-        <section class="zjl">
-            <strong>Popular singer</strong><br />
-            <div class="list">
-                <div class="zj">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_%283%29.png">
-                    Taylor Swift
-                </div>
-                <div class="zj">
-                    <img src="https://picsum.photos/120/130">
-                    Alan Walker
-                </div>
-                <div class="zj">
-                    <img src="https://picsum.photos/120/130">
-                    The fall guys
-                </div>
-                <div class="zj">
-                    <img src="https://picsum.photos/120/130">
-                    Marcoon 5
-                </div>
-                <div class="zj">
-                    <img src="https://picsum.photos/120/130">
-                    <br>Me
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
     <footer>
         <!-- 上部分 -->
@@ -134,17 +146,17 @@
         <div class="playbtn">
             <div class="m-btn-box">
                 <button class="m-previous-btn">
-                    <svg class="icon" aria-hidden="true" style="transform: scale(-1);color:#ffffff">
+                    <svg class="icon" aria-hidden="true" style="transform: scale(-1);fill: #ffffff">
                         <use href="#icon-xiayishou"></use>
                     </svg>
                 </button>
                 <button class="m-play-btn">
-                    <svg class="icon" aria-hidden="true" style="color:white;">
+                    <svg class="icon" aria-hidden="true" style="fill: #ffffff">
                         <use href="#icon-bofang"></use>
                     </svg>
                 </button>
                 <button class="m-next-btn">
-                    <svg class="icon" aria-hidden="true" style="color:white;">
+                    <svg class="icon" aria-hidden="true" style="fill: #ffffff">
                         <use href="#icon-xiayishou"></use>
                     </svg>
                 </button>
