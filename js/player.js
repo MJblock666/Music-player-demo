@@ -1,3 +1,4 @@
+//from web
 // 音乐播放器
 class MusicPlayer {
     constructor(

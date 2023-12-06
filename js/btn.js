@@ -19,7 +19,7 @@ function about(){
 function prank(){
   Swal.fire({
       icon: 'error',
-      title:'FUCK YOU!',
-      html: '<a>WHY YOU CLICK THIS ME!!</a>'
+      title:'Yes!I am the populair singer!',
+      html: '<a>But WHY YOU CLICK THIS ME!!</a>'
     })
 }

@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
           const username = document.getElementById('swal-input1').value;
           const password = document.getElementById('swal-input2').value;
   
-          // 在这里添加你的用户名和密码验证逻辑
+          // 在这里添加你的用户名和密码验证逻辑  // no database,that is why i do like this.
           if (username === 'admin' && password === '123456') {
             return [username, password];
           } else {
