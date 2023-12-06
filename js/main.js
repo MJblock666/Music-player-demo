@@ -35,7 +35,7 @@ function favorite() {
     ['ID', 'Song', 'Singer', 'Album', 'Play It!'],
     ['231', 'A Moment Apart', 'ODESZA', 'Forza Horizon 4', '<button onclick="sorry()">Play</i></button>'],
     ['101', 'Cedar Shead', 'Koloto', '-', '<button onclick="sorry()">Play</i></button>'],
-    ['216', 'Sunshine rainbow white horse', 'Big Zhangwei', 'Cell 4x4', '<button onclick="sorry()">Play</i></button>'],
+    ['216', 'Sunshine rainbow white horse', 'Big Zhangwei', 'renjianjingpin', '<button onclick="sorry()">Play</i></button>'],
     ['189', 'Fool for you', 'Kastra', '-', '<button onclick="sorry()">Play</i></button>'],
     ['111', 'Qimeidi', 'Guo Ding', '-', '<button onclick="sorry()">Play</i></button>'],
     ['-', '', '', '', ''], ['-', '', '', '', ''], ['-', '', '', '', ''], ['-', '', '', '', ''],
@@ -60,7 +60,7 @@ function recent() {
     ['ID', 'Song', 'Singer', 'Album', 'Play It!'],
     ['231', 'A Moment Apart', 'ODESZA', 'Forza Horizon 4', '<button onclick="sorry()">Play</i></button>'],
     ['101', 'Cedar Shead', 'Koloto', '-', '<button onclick="sorry()">Play</i></button>'],
-    ['216', 'Sunshine rainbow white horse', 'Big Zhangwei', 'Cell 4x4', '<button onclick="sorry()">Play</i></button>']
+    ['216', 'Sunshine rainbow white horse', 'Big Zhangwei', 'renjianjingpin', '<button onclick="sorry()">Play</i></button>']
   ];
   var tableHTML = '<div class="back" onclick="home();"><i class="fa-solid fa-left-long" style="color: #ffffff;"></i>Back</div><br><h1>Recent Song List</h1><br><table class="table"><tbody>';
   for (var i = 0; i < tableContent.length; i++) {
